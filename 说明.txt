@@ -1,0 +1,19 @@
+代码功能：打开打印机USB接口，vid=d23c pid=0001，
+打开成功后，依次操作以下几项：
+【1】、发送PRINT 1,1\r\nGET Speed\r\n。
+【2】、获取并打印当前打印机的MFG、MDL、SN三个参数。
+【3】、获取并打印当前打印机的状态(如0x18为空闲)信息。
+【4】、2秒后自动关闭打印机USB接口。
+
+
+
+当前保存的是在Linux下CMakeLists.txt，
+Linux系统下编译时，通过命令行，导航到Build文件夹下，
+输入cmake -G "MinGW Makefiles" ..  意思是生成MinGW格式的Makefile文件
+即可生成在Windows系统下的Makefile文件
+然后命令行中输入make并回车，就会根据Makefile文件，在Bin路径中生成USB_P可执行文件。
+运行时，输入sudo ../Bin/USB_P
+
+
+
+在Windows下，无法开启USB，提示不支持。
