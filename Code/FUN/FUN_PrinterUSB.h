@@ -34,7 +34,8 @@ typedef struct
 class Libusb_Printer
 {
 public:
-     Libusb_Printer(USBReceDataEvent,USBCloseEvent);
+     //显示构造函数
+     explicit Libusb_Printer(USBReceDataEvent,USBCloseEvent);
      ~Libusb_Printer();
      //
      USBOperationResult FUN_PrinterUSB_Open(uint16_t pid,uint16_t vid);
