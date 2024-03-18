@@ -8,6 +8,8 @@
 
 
 当前保存的是在Linux下CMakeLists.txt，
+如果Libusb-Printer目录下没有Bin和Build这两个目录 ，则可以通过
+sudo mkdir Bin Build -m 777来一次性创建这两个目录
 Linux系统下编译时，通过命令行，导航到Build文件夹下，
 输入cmake -G "MinGW Makefiles" ..  意思是生成MinGW格式的Makefile文件
 即可生成在Windows系统下的Makefile文件
